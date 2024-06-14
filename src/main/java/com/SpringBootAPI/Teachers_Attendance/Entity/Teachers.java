@@ -6,35 +6,34 @@ import org.springframework.data.relational.core.mapping.Column;
 import org.springframework.data.relational.core.mapping.Table;
 
 import java.time.LocalTime;
-
 @Table(name = "Teachers_Attendance")
 public class Teachers {
 
     @Id
     @Column("ID")
-    int id;
+    private int id;
 
     @Column("Name")
-    String name;
+    private String name;
 
-    @Column("Primary-sub")
-    String psub;
+    @Column("Primarysub")
+    private String primarySub;
 
-    @Column("Secondary-sub")
-    String ssub;
+    @Column("Secondarysub")
+    private String secondarySub;
 
-    @Column("Entry-Time")
-    LocalTime etime;
+    @Column("EntryTime")
+    private LocalTime entryTime;
 
     public Teachers() {
     }
 
-    public Teachers(int id, String name, String psub, String ssub, LocalTime etime) {
+    public Teachers(int id, String name, String primarySub, String secondarySub, LocalTime entryTime) {
         this.id = id;
         this.name = name;
-        this.psub = psub;
-        this.ssub = ssub;
-        this.etime = etime;
+        this.primarySub = primarySub;
+        this.secondarySub = secondarySub;
+        this.entryTime = entryTime;
     }
 
     public int getId() {
@@ -53,27 +52,27 @@ public class Teachers {
         this.name = name;
     }
 
-    public String getPsub() {
-        return psub;
+    public String getPrimarySub() {
+        return primarySub;
     }
 
-    public void setPsub(String psub) {
-        this.psub = psub;
+    public void setPrimarySub(String primarySub) {
+        this.primarySub = primarySub;
     }
 
-    public String getSsub() {
-        return ssub;
+    public String getSecondarySub() {
+        return secondarySub;
     }
 
-    public void setSsub(String ssub) {
-        this.ssub = ssub;
+    public void setSecondarySub(String secondarySub) {
+        this.secondarySub = secondarySub;
     }
 
-    public LocalTime getEtime() {
-        return etime;
+    public LocalTime getEntryTime() {
+        return entryTime;
     }
 
-    public void setEtime(LocalTime etime) {
-        this.etime = etime;
+    public void setEntryTime(LocalTime entryTime) {
+        this.entryTime = entryTime;
     }
 }
